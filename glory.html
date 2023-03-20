@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body onload="checkCookies()">
+        <h1 onclick="this.innerHTML='Oooops!'">Bonyeza</h1>
+        <h2 onclick="changeText(this)">Finya</h2>
+        <button id="myBtn">Jaribu uone</button>
+        <p id="demo"></p>
+        Leta jina bana:<input type="text" id="fname" onchange="upperCase()">
+        <script>
+            function changeText(id) {
+                id.innerHTML="Wueh!";
+            }
+            document.getElementById("myBtn").onclick = displayDate;
+            function displayDate() {
+                document.getElementById("demo").innerHTML = Date();
+            }
+            function upperCase() {
+                const x = document.getElementById("name");
+                x.name = x.value.toUpperCase();
+            }
+        </script>
+    </body>
+</html>
