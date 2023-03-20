@@ -6,6 +6,10 @@
         <button id="myBtn">Jaribu uone</button>
         <p id="demo"></p>
         Leta jina bana:<input type="text" id="fname" onchange="upperCase()">
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#f4db60; width:120px; height:40px; padding:40px;">Now you see me!</div>
+        <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color: #49a233; width: 200px; height: 100px; padding: 50px;">Click me!</div>
         <script>
             function changeText(id) {
                 id.innerHTML="Wueh!";
@@ -17,6 +21,22 @@
             function upperCase() {
                 const x = document.getElementById("name");
                 x.name = x.value.toUpperCase();
+            }
+            function mOver(obj) {
+                obj.style.background = "#28c4d8"
+                obj.innerHTML = "Now you don't!"
+            }
+            function mOut(obj) {
+                obj.style.backgroundColor = "#f4db60"
+                obj.innerHTML = "Now you see me!"
+            }
+            function mDown(obj) {
+                obj.style.backgroundColor = "#ddfc8c"; 
+                obj.innerHTML = "Wacha bana!"
+            }
+            function mUp(obj) {
+                obj.style.backgroundColor = "#49a233";
+                obj.innerHTML = "Shukran!"
             }
         </script>
     </body>
